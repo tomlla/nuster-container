@@ -5,9 +5,9 @@ services:
     stdin_open: true
 
     # https://hub.docker.com/layers/nuster/nuster/3.1.0.19-alpine/images/sha256-57bc88fedf24a056027a1a90de6406aa6b16c61c8c2d29430ee98f591a38c5aa
-    image: nuster:3.1.0.19-alpine
+    image: nuster/nuster:3.1.0.19-alpine
     command: nuster -f /etc/nuster/nuster.cfg
     volumes:
-      - nuster-cache-server.cfg:/etc/nuster/nuster.cfg
+      - ./nuster-cache-server.cfg:/etc/nuster/nuster.cfg
     # environment:
     #   TZ: Japan
